@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Formulaire</title>
+		<link rel="stylesheet" href="./main.css">
+		<script src="./formulaire.js"></script>
+	</head>
+
+	<body>
+		<h1>Enregistrer un nouveau compte</h1>
+		<form action="reg_cpte.html" method="get" name="registration_form" id="registration_form">
+		<label for="email">E-mail: </label>
+		<input type="text" name="email" id="email">
+		<span>*</span>
+		<br>
+		<label for="mobile">Mobile: </label>
+	 	<input type="text" name="mobile" id="mobile">
+		<span>*</span>
+		<br>
+
+		<label for="pays">Pays: </label>
+		<select>
+		<option value="choice">Choisir une option </option>
+		<option value="usa">Etat-Unis</option>
+		<option value="chine">Chine</option>
+		<option value="uk">Royaume-Uni</option>
+		</select>
+		<span>*</span>
+		<br>
+
+		<label for="contact">Me contacter par: </label>
+		<input type="radio" name="contact" id="sms">SMS
+		<input type="radio" name="contact" id="email">Email
+		<input type="radio" name="contact" id="contact pas">Ne pas me contacter
+
+
+		<p>Conditions générales: <input type="checkbox" name="condition" value="Accept"> J'accepte *</p>
+		<br>
+
+	<input type="button" id="reg" value="Soumettre" onclick="traiterSaisies()">
+	<input type="button" id="reset" value="Reinitialiser" onclick="traiterSaisies()">
+
+
+	</form>
+	</body>
+</html>
