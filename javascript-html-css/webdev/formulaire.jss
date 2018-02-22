@@ -29,10 +29,16 @@ var traiterSaisies = function(){
 	}
 }
 
+var resetForm = function(){
+	document.getElementById("registration_form").reset();
+	$("mobile").nextElementSibling.firstChild.nodeValue="*";
+	$("email").nextElementSibling.firstChild.nodeValue="*";
+}
+
 window.onload=function(){
 	//action clic sur bouton "Soumettre"
 	$("reg").onclick=traiterSaisies;
-	$("reset").onclick=resetForm;
-	$("email_address").focus();
+	$("resett").onclick=resetForm;
+	$("email").focus();
 
 };
